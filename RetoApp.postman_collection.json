@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "b969a3e1-272a-4f47-a6da-16ea8df90d24",
+		"name": "RetoApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Guardar Tipo de cambio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"fecha\": \"2021-12-18\",\r\n\t\"monedaOrigen\": \"SOL\",\r\n\t\"monedaDestino\": \"DOL\",\r\n\t\"importeCambio\": 4.03\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/tipo-cambio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"tipo-cambio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Operacion Tipo de cambio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monedaOrigen\": \"SOL\",\r\n    \"monedaDestino\": \"DOL\",\r\n    \"importe\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cambio/operacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cambio",
+						"operacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de tipos de cambio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/tipo-cambio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"tipo-cambio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
